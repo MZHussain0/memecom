@@ -1,6 +1,7 @@
 ﻿import SignIn from "@/components/SignIn";
 import { buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import { ChevronLeftIcon } from "lucide-react";
 import Link from "next/link";
 
 const page = ({}) => {
@@ -13,6 +14,7 @@ const page = ({}) => {
             buttonVariants({ variant: "ghost" }),
             "self-start -mt-20"
           )}>
+          <ChevronLeftIcon className="h-4 w-4 mr-2" />
           Home
         </Link>
         <SignIn />
