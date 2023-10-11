@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Providers from "@/components/Providers";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
@@ -26,13 +27,15 @@ export default function RootLayout({
         inter.className
       )}>
       <body className="min-h-screen pt-12 bg-slate-50 antialiased">
-        <Toaster richColors position="top-center" />
-        {/* @ts-expect-error server component */}
-        <Navbar />
-        {authModal}
-        <div className="container max-w-7xl mx-auto h-full pt-12">
-          {children}
-        </div>
+        <Providers>
+          <Toaster richColors position="top-center" />
+          {/* @ts-expect-error server component */}
+          <Navbar />
+          {authModal}
+          <div className="container max-w-7xl mx-auto h-full pt-12">
+            {children}
+          </div>
+        </Providers>
       </body>
     </html>
   );
