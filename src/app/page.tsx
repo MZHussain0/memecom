@@ -1,6 +1,7 @@
 import { buttonVariants } from "@/components/ui/Button";
 import { HomeIcon } from "lucide-react";
 import Link from "next/link";
+import "tailwindcss/tailwind.css";
 
 export default function Home() {
   return (
