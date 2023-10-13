@@ -1,4 +1,5 @@
 ﻿import MiniCreatePost from "@/components/MiniCreatePost";
+import PostFeed from "@/components/PostFeed";
 import { INFINITE_SCROLLING_PAGINATION_RESULT } from "@/config";
 import { getAuthSession } from "@/lib/auth";
 import { db } from "@/lib/db";
@@ -41,6 +42,7 @@ const PageDetialProps = async ({ params }: pageProps) => {
       </h1>
       <MiniCreatePost session={session} />
       {/* TODO: Show posts in user feed */}
+      <PostFeed initialPosts={subreddit.posts} subredditName={subreddit.name} />
     </>
   );
 };
